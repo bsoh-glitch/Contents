@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1B3A5C;
+  --color-primary-light: #2A5580;
+  --color-primary-dark: #0F2640;
+  --color-accent: #00B4D8;
+  --color-accent-light: #48CAE4;
+  --color-accent-dark: #0096B7;
+  --color-surface: #F8FAFB;
+  --color-surface-alt: #EEF2F6;
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #4A5568;
+  --color-text-muted: #718096;
+  --color-white: #FFFFFF;
+  --color-border: #E2E8F0;
+
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text-primary);
+    background: var(--color-white);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:px-12 lg:px-24 lg:py-28;
+  }
+  .container-main {
+    @apply max-w-7xl mx-auto;
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  }
+  .gradient-accent {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  }
+}
